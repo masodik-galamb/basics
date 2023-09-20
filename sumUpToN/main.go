@@ -54,6 +54,15 @@ func main() {
 		return
 	}
 
+	/*
+		min, err1 := strconv.Atoi(os.Args[1])
+		max, err2 := strconv.Atoi(os.Args[2])
+		if err1 != nil || err2 != nil || min >= max {
+			fmt.Println("wrong numbers")
+			return
+		}
+	*/
+
 	if min < max {
 		for i := min; i <= max; i++ {
 
