@@ -40,9 +40,20 @@ func main() {
 		fmt.Println("Wrong numbers")
 		return
 	}
+	var sum int
 
 	for i := min; i <= max; i++ {
 
+		switch {
+		case i%2 != 0:
+			continue
+		default:
+			sum += i
+			fmt.Print(i)
+			if i > min && i < max {
+				fmt.Print(" + ")
+			}
+		}
 	}
-
+	fmt.Printf(" = %d\n", sum)
 }
