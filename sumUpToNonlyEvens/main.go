@@ -35,12 +35,26 @@ func main() {
 	min, err1 := strconv.Atoi(os.Args[1])
 	max, err2 := strconv.Atoi(os.Args[2])
 
-	if err1 != nil || err2 != nil ||
-		min <= 0 || max <= 0 || min >= max {
+	if err1 != nil || err2 != nil || min >= max {
 		fmt.Println("Wrong numbers")
 		return
 	}
 	var sum int
+
+	/*
+		for i := min; i <= max; i++ {
+			if i%2 != 0 {
+				continue
+			}
+			sum += i
+
+			fmt.Print(i)
+			if i < max-1 {
+				fmt.Print(" + ")
+			}
+		}
+		fmt.Printf(" = %d\n", sum)
+	*/
 
 	for i := min; i <= max; i++ {
 
@@ -50,7 +64,7 @@ func main() {
 		default:
 			sum += i
 			fmt.Print(i)
-			if i > min && i < max {
+			if i < max-1 {
 				fmt.Print(" + ")
 			}
 		}
