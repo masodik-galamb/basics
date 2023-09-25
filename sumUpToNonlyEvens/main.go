@@ -40,33 +40,15 @@ func main() {
 		return
 	}
 	var sum int
-
-	/*
-		for i := min; i <= max; i++ {
-			if i%2 != 0 {
-				continue
-			}
-			sum += i
-
-			fmt.Print(i)
-			if i < max-1 {
-				fmt.Print(" + ")
-			}
-		}
-		fmt.Printf(" = %d\n", sum)
-	*/
-
 	for i := min; i <= max; i++ {
-
-		switch {
-		case i%2 != 0:
+		if i%2 != 0 {
 			continue
-		default:
-			sum += i
-			fmt.Print(i)
-			if i < max-1 {
-				fmt.Print(" + ")
-			}
+		}
+		sum += i
+
+		fmt.Print(i)
+		if i < max-1 {
+			fmt.Print(" + ")
 		}
 	}
 	fmt.Printf(" = %d\n", sum)
